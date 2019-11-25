@@ -1,0 +1,17 @@
+#pragma once
+#include "Sprite.h"
+#include <coreTimer.h>
+
+struct Bullet : public Sprite {
+public:
+    using Sprite::Sprite;
+
+    // Counts the lifetime of the bullet
+    core::Timer lifeTime;
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Collider
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Creates the collider for the bullet
+    void setupCollider();
+};
